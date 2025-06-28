@@ -22,3 +22,7 @@ The frontend React application is organized with clear components for ease of us
 To run the project locally, users simply need to clone the repository, start a local instance of MongoDB, and then run the backend and frontend servers. Environment variables, such as the MongoDB connection string, are managed using a .env file for security and flexibility. The frontend can be started with npm start inside the client folder, and the backend runs via node server.js in the server folder. This modular structure makes the project easy to understand, maintain, and extend. Developers can add authentication, multiple document rooms, rich-text formatting, or version control as advanced features in future iterations.
 
 In summary, this Real-Time Collaborative Document Editor demonstrates the practical application of full-stack web development skills using modern technologies. It shows how real-time communication, persistent data storage, and dynamic interfaces can be combined to build powerful collaborative tools. The project is ideal for students, developers, or teams interested in understanding how collaborative applications work under the hood. The entire source code is organized in a beginner-friendly manner, making it an excellent foundation for learning or future expansion.
+
+
+OUTPUT- 
+![Image](https://github.com/user-attachments/assets/96eff26b-2990-43fd-890d-5c69b86f83e0)
