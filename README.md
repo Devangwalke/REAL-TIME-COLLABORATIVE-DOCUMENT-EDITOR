@@ -1,70 +1,24 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
-## Available Scripts
+Company- CODTECH IT SOLUTION
 
-In the project directory, you can run:
+NAME - DEWANG SAMBHAJI WALKE
 
-### `npm start`
+INTERN ID - CT1MTDF558
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+DOMAIN - Full Stack Web Development
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+DURATION - 4 WEEKS
 
-### `npm test`
+MENTOR - NEELA SANTHOSH
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
 
-### `npm run build`
+This project is a Real-Time Collaborative Document Editor designed to enable multiple users to simultaneously edit a shared text document in real-time. Built using a modern web development stack, the application utilizes React.js on the frontend for a responsive, interactive user interface, while the backend is powered by Node.js with Express.js to handle HTTP requests and API endpoints. Socket.IO is integrated to enable real-time, bi-directional communication between the client and the server, allowing changes made by one user to instantly reflect across all other users connected to the same document session. The application also leverages MongoDB as the primary database for persistent storage of document data. This setup ensures that document content is both real-time synchronized and securely stored for future retrieval.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+The core idea behind this project is to replicate the functionality seen in tools like Google Docs but in a simpler, self-hosted form. When a user opens the application, they can create a new document or open an existing one using a unique document ID. As they type or edit the content, their changes are instantly broadcast to all other users connected to that document through web sockets. MongoDB is used in the backend to store each document with a unique identifier, ensuring that edits can be saved and resumed later. The server listens for incoming socket events such as “send-changes” and “save-document,” managing real-time data transmission and ensuring consistency across all clients.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The frontend React application is organized with clear components for ease of use and scalability. The main editor uses a content-editable area or a text editor library and connects to the backend using the socket.io-client library. When a user types or modifies text, changes are emitted through sockets and received by other users in the session, creating a seamless collaborative experience. On the backend, server.js initializes the Express server, connects to MongoDB using the Mongoose ORM, and sets up the Socket.IO server to handle real-time events. Additionally, API routes can be defined to handle basic document creation, retrieval, or updates using standard HTTP methods like GET and POST.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+To run the project locally, users simply need to clone the repository, start a local instance of MongoDB, and then run the backend and frontend servers. Environment variables, such as the MongoDB connection string, are managed using a .env file for security and flexibility. The frontend can be started with npm start inside the client folder, and the backend runs via node server.js in the server folder. This modular structure makes the project easy to understand, maintain, and extend. Developers can add authentication, multiple document rooms, rich-text formatting, or version control as advanced features in future iterations.
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+In summary, this Real-Time Collaborative Document Editor demonstrates the practical application of full-stack web development skills using modern technologies. It shows how real-time communication, persistent data storage, and dynamic interfaces can be combined to build powerful collaborative tools. The project is ideal for students, developers, or teams interested in understanding how collaborative applications work under the hood. The entire source code is organized in a beginner-friendly manner, making it an excellent foundation for learning or future expansion.
