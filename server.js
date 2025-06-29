@@ -10,17 +10,17 @@ app.use(cors());
 
 const server = http.createServer(app);
 
-// ✅ Connect to MongoDB
+//  Connect to MongoDB
 mongoose
   .connect("mongodb://127.0.0.1:27017/rtde")
   .then(() => {
-    console.log("✅ Connected to MongoDB");
+    console.log(" Connected to MongoDB");
   })
   .catch((err) => {
-    console.error("❌ MongoDB connection error:", err);
+    console.error(" MongoDB connection error:", err);
   });
 
-// ✅ Setup Socket.IO
+//  Setup Socket.IO
 const io = new Server(server, {
   cors: {
     origin: "http://localhost:3000", // frontend address
@@ -40,7 +40,7 @@ io.on("connection", (socket) => {
   });
 });
 
-// ✅ Start server
+//  Start server
 const PORT = 5000;
 server.listen(PORT, () => {
   console.log(`🚀 Socket.IO server running at http://localhost:${PORT}`);
